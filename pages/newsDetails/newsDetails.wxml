@@ -1,0 +1,13 @@
+<!--pages/newsDetails/index.wxml-->
+<!-- 引入模板 -->
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view>
+	<image src="{{url}}{{foodContent.img_url}}"></image>
+</view>
+<view>
+  <text class="title">{{foodContent.title}}</text>
+</view>
+<view class="content">
+	<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>

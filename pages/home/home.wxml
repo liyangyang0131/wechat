@@ -1,0 +1,14 @@
+<!--pages/home/home.wxml-->
+<view class="lists">
+<scroll-view scroll-y="true" style="height: {{windowHeight}}px"  bindscrolltolower="loadMore">
+	<view class="item" wx:for="{{lists}}" wx:key="_id">
+		<text class="title">{{item.title}}</text>
+	</view>
+	<view class="loadMore" hidden="{{loading?true:''}}">
+		<image src="../../static/images/loading2.png" />
+		<text>加载更多</text>
+	</view> 
+
+</scroll-view>
+
+</view>

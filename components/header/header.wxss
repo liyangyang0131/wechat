@@ -1,0 +1,14 @@
+/* components/header/header.wxss */
+.header{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  background-color:blue;
+  text-align: center;
+  color:#fff;
+}
+
+.logOut{
+  float:right;
+  margin:7px;
+}

@@ -1,0 +1,5 @@
+/* pages/user/user.wxss */
+.h2{
+  font-size:32rpx;
+  font-weight: bold;
+}

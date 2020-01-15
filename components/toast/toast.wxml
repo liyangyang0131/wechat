@@ -1,0 +1,4 @@
+<!--components/toast/toast.wxml-->
+<view class="wrap {{mask?'mask':''}}" hidden="{{hidden}}">
+	<text class="content">{{title}}</text>
+</view>

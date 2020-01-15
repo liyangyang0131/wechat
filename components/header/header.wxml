@@ -1,0 +1,6 @@
+<!--components/header/header.wxml-->
+<view class="header">
+  {{title}}
+  <button class="logOut" size="mini" bindtap="logOut">退出</button>
+  <slot></slot>
+</view>

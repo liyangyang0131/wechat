@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "Toast":"../../components/toast/toast",
+    "br":"../../components/br/br",
+    "header":"../../components/header/header"
+  },
+  "navigationBarTitleText":"个人中心"
+}

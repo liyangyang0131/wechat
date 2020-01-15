@@ -1,0 +1,74 @@
+<!--pages/user/user.wxml-->
+<wxs src="../../wxs/FormatDate.wxs" module="Format" />
+
+<header title="{{title}}" bindmessage="msg">
+  <text style="color:yellow">slot标签</text>
+</header>
+<view>
+  <text>这是个人中心</text>
+</view>
+
+<!-- 数据绑定 -->
+<view>数据绑定：{{msg}}</view>
+
+<!-- 条件逻辑 -->
+<view wx:if="{{flag}}">
+  <text>条件判断</text>
+</view>
+
+<!-- 属性绑定 -->
+<view data-aid="{{aid}}">属性绑定：审查元素看一下</view>
+
+<!-- 列表渲染 -->
+<view wx:for="{{lists}}" wx:key="index">
+{{item}}
+</view>
+
+<view wx:for="{{lists}}" wx:for-index="key" wx:for-item="list" wx:key="key">
+{{key}}---{{list}}
+</view>
+
+<!-- 事件  事件执行-->
+<button size="mini" bindtap="run">事件按钮</button>
+<br></br>
+
+<!-- 获取数据 -->
+<button size="mini" bindtap="getMsg">获取msg值</button>
+<br></br>
+
+<!-- 修改数据 -->
+<button size="mini" bindtap="setMsg">修改msg值</button>
+<br></br>
+
+<!-- 事件对象 -->
+<button data-aid="1213" size="mini" bindtap="doEvent">事件对象</button>
+<br></br>
+
+<!-- 配置视图样式、页面跳转
+底部tab页至少两个，至多5个
+配置过tab的，不能在其他页面实现跳转
+页面跳转 -->
+
+<!-- 自定义组件 -->
+<view class="h2">自定义组件</view>
+<text>你好</text>
+<br></br>
+<text>组件</text>
+
+
+<view class="h2">wxs使用</view>
+<view>
+<text>{{Format.FormatDate(time)}}</text>
+</view>
+
+<view class="h2">自定义toast组件</view>
+<button bindtap="test" size="mini">测试toast组件是否有遮罩，此按钮能否点击</button>
+<br/>
+<button size="mini" bindtap="toast">点击弹出toast</button>
+<Toast id="toast" title="{{toast.title}}" time="{{toast.time}}" mask="{{toast.mask}}">toast组件</Toast>
+
+<view class="h2">images显示图片以及实现多图预览功能</view>
+<image bindtap="preview" data-src="{{src}}"
+src="{{src}}" 
+style="width:100%"></image>
+

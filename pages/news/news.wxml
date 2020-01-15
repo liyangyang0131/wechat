@@ -1,0 +1,14 @@
+<!--pages/news/index.wxml-->
+<header title="{{title}}"></header>
+<view class="menu">
+	<view wx:for="{{foodLists}}" wx:key="_id">
+		<view class="menuType">{{item.title}}</view>
+		<view class="wrap">
+			<view class="singleFood" wx:for="{{item.list}}" wx:for-item="cat" wx:key="_id" data-id="{{cat._id}}" bindtap="goDetails">
+				<image src="{{url}}{{cat.img_url}}"></image>
+				<view>{{cat.title}}</view>
+				<view>￥{{cat.price}}</view>
+			</view>
+		</view>	
+	</view>
+</view>

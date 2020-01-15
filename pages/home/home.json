@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "br":"../../components/br/br",
+    "header":"../../components/header/header"
+  },
+  "navigationBarTitleText": "首页"
+}

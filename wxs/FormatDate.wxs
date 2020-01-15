@@ -1,0 +1,27 @@
+// 有自己的一套脚本语言，使用时查看官方文档
+
+var FormatDate = function (d) {
+  var date = getDate(d);
+  var y = date.getFullYear();
+  var M = date.getMonth() + 1;
+  var d = date.getDate();
+  var h = date.getHours();
+  var m = date.getMinutes();
+  var s = date.getSeconds();
+ 
+  var result = FillZero([y,M,d]).join('-') + ' ' + FillZero([h, m, s]).join(':')
+  return result
+}
+
+var FillZero = function (arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if(arr[i] < 10){
+      arr[i] = '0' + arr[i]
+    }
+  }
+  return arr;
+}
+
+module.exports = {
+  FormatDate: FormatDate
+}

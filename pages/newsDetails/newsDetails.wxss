@@ -1,0 +1,12 @@
+/* pages/newsDetails/index.wxss */
+@import "../../wxParse/wxParse.wxss";
+image{
+  width:100%;
+}
+.title{
+  height:60rpx;
+  line-height:60rpx;
+}
+.content{
+  font-size:28rpx;
+}
